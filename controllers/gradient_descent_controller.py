@@ -1,8 +1,6 @@
 import model.perceptron_descente_gradient.perceptron_csv as gradient
 
 def start(filename):
-    # Chargement des données depuis un fichier CSV 2_9 uniquement
-    filename = "datas/table_2_9.csv"
     X, y = gradient.load_data(filename)
 
     # Apprentissage

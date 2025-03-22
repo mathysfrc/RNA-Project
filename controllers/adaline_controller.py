@@ -1,8 +1,6 @@
 import model.perceptron_adaline.perceptron_csv as adaline
 
 def start(filename):
-    filename = "datas/table_2_9.csv"
-
     # Chargement des données depuis un fichier CSV
     X, y = adaline.load_data(filename)
 
