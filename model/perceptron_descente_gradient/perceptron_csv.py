@@ -76,21 +76,3 @@ def load_data(filename):
     y_orig = df.iloc[:, -1].values  # Étiquettes
     y = np.where(y_orig == 1, 1, 0)  # Conversion pour sigmoïde
     return X, y
-
-
-# Chargement des données depuis un fichier CSV 2_9 uniquement
-filename = "../../datas/table_2_9.csv"
-X, y = load_data(filename)
-
-# Apprentissage
-model = Perceptron()
-errors = model.fit(X, y)
-
-# Évaluation
-accuracy = sum(model.predict(xi) == yi for xi, yi in zip(X, y)) / len(X)
-print(f"\nPoids finaux: {model.w}")
-print(f"Précision: {accuracy * 100:.2f}%")
-
-# Visualisations
-plot_decision_boundary(model, X, y)
-plot_learning_curve(errors)

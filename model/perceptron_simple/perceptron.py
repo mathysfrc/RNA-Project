@@ -53,21 +53,3 @@ def plot_decision_boundary(X, d, weights):
     plt.ylabel("X2")
     plt.title("Frontière de décision du Perceptron")
     plt.show()
-
-
-# Jeu de données pour la porte logique ET
-X = np.array([[0, 0], [0, 1], [1, 0], [1, 1]])
-d = np.array([0, 0, 0, 1])  # Sorties attendues
-
-# Entraînement du perceptron
-weights = perceptron(X, d)
-print("Poids finaux:", weights)
-
-# Test du perceptron sur la porte ET
-for x in X:
-    x_i = np.insert(x, 0, 1)  # Ajout du biais
-    y = activation(np.dot(weights, x_i))
-    print(f"Entrée: {x}, Sortie prédite: {y}")
-
-# Affichage graphique des résultats
-plot_decision_boundary(X, d, weights)

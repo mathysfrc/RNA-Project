@@ -4,6 +4,10 @@ The goal of this project is to build from scratch (without any frameworks/librar
 
 To run this project, you need a `Datas` folder at the root of the project containing the data files.
 
+## Structure
+
+You need to create a `.env` file at the root of the project with the sample of `env.example` :
+
 ## Installation
 
 ```bash
